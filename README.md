@@ -52,7 +52,9 @@ ABCD/
 ### Alternative Zone (Hidden Gems) - 2nd Quadrant
 * **Characteristics**: Low transit crowd flow (Cost) and rich shop counts (Benefit).
 * **Representative Areas**: **Sangsu Station (C/P: 18.14)**, **Songpanaru Station (C/P: 13.15)**, **Seokchongobun Station (C/P: 10.60)**, Mangwon Station, Itaewon Station.
-* **Visualization**: Plot representation is saved under `images/cp_matrix_dark.png`.
+* **Visualization**: 
+
+![Congestion C/P Matrix](images/cp_matrix_dark.png)
 
 ### Saturated Zone (Traditional Hot Spots) - 1st/4th Quadrant
 * **Characteristics**: Extremely high crowd flow (Cost), making the experience crowded despite rich options.
