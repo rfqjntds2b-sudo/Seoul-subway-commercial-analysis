@@ -5,6 +5,9 @@ filtered_bus_data_2025.csv
 filtered_bus_data_2026.csv
 shop.csv
 
+# Temporary scratch notebooks
+backup_scratch/
+
 # Python/Jupyter Notebook temporary files
 .ipynb_checkpoints/
 __pycache__/

@@ -1,0 +1,191 @@
+{
+  "version": "2.6",
+  "children": [
+    {
+      "type": "frame",
+      "id": "bi8Au",
+      "x": 0,
+      "y": 0,
+      "name": "Frame",
+      "clip": true,
+      "width": 1920,
+      "height": 1080,
+      "fill": "#0B0B0C",
+      "layout": "none",
+      "children": [
+        {
+          "type": "text",
+          "id": "slide_title",
+          "x": 80,
+          "y": 60,
+          "width": 1000,
+          "height": 50,
+          "content": "③ 공간 스캔 기반 혼잡 가성비(C/P) 매트릭스",
+          "fontSize": 32,
+          "fontFamily": "Inter",
+          "fontWeight": "bold",
+          "fill": "#EDEDEF"
+        },
+        {
+          "type": "text",
+          "id": "slide_subtitle",
+          "x": 80,
+          "y": 115,
+          "width": 1000,
+          "height": 40,
+          "content": "[결론: Low Cost / High Benefit 대안 상권 도출]",
+          "fontSize": 20,
+          "fontFamily": "Inter",
+          "fontWeight": "medium",
+          "fill": "#9B9BA3"
+        },
+        {
+          "type": "rectangle",
+          "id": "chart_card",
+          "x": 80,
+          "y": 180,
+          "width": 1120,
+          "height": 820,
+          "fill": "#131316",
+          "stroke": "#26262B",
+          "radius": 16
+        },
+        {
+          "type": "image",
+          "id": "chart_image",
+          "x": 100,
+          "y": 200,
+          "width": 1080,
+          "height": 780,
+          "src": "./발표자료/cp_matrix_dark.png"
+        },
+        {
+          "type": "rectangle",
+          "id": "target_card",
+          "x": 1240,
+          "y": 180,
+          "width": 600,
+          "height": 390,
+          "fill": "#131316",
+          "stroke": "#26262B",
+          "radius": 16
+        },
+        {
+          "type": "text",
+          "id": "target_card_title",
+          "x": 1280,
+          "y": 220,
+          "width": 520,
+          "height": 40,
+          "content": "★ Target Zone (대안 상권)",
+          "fontSize": 24,
+          "fontFamily": "Inter",
+          "fontWeight": "bold",
+          "fill": "#22D3EE"
+        },
+        {
+          "type": "text",
+          "id": "target_card_b1",
+          "x": 1280,
+          "y": 280,
+          "width": 520,
+          "height": 30,
+          "content": "• 인구 밀집도 대비 풍부한 상가 인프라",
+          "fontSize": 18,
+          "fontFamily": "Inter",
+          "fontWeight": "semibold",
+          "fill": "#EDEDEF"
+        },
+        {
+          "type": "text",
+          "id": "target_card_b2",
+          "x": 1280,
+          "y": 320,
+          "width": 520,
+          "height": 30,
+          "content": "• 대표 역: 상수, 송파나루, 석촌고분, 망원, 이태원",
+          "fontSize": 18,
+          "fontFamily": "Inter",
+          "fontWeight": "semibold",
+          "fill": "#EDEDEF"
+        },
+        {
+          "type": "text",
+          "id": "target_card_desc",
+          "x": 1280,
+          "y": 370,
+          "width": 520,
+          "height": 160,
+          "content": "기존 핫플레이스의 극심한 교통 인파와 웨이팅을 회피하면서도 충분한 식당 및 주점 선택지를 제공하여 대안 상권으로의 매력도가 매우 높은 눈치게임 승리 지역입니다.",
+          "fontSize": 16,
+          "fontFamily": "Inter",
+          "fontWeight": "normal",
+          "fill": "#9B9BA3"
+        },
+        {
+          "type": "rectangle",
+          "id": "saturated_card",
+          "x": 1240,
+          "y": 610,
+          "width": 600,
+          "height": 390,
+          "fill": "#131316",
+          "stroke": "#26262B",
+          "radius": 16
+        },
+        {
+          "type": "text",
+          "id": "saturated_card_title",
+          "x": 1280,
+          "y": 650,
+          "width": 520,
+          "height": 40,
+          "content": "⚠️ 과포화 상권 (기존 핫플)",
+          "fontSize": 24,
+          "fontFamily": "Inter",
+          "fontWeight": "bold",
+          "fill": "#FF4D5E"
+        },
+        {
+          "type": "text",
+          "id": "saturated_card_b1",
+          "x": 1280,
+          "y": 710,
+          "width": 520,
+          "height": 30,
+          "content": "• 극심한 대중교통 인파와 긴 대기 시간",
+          "fontSize": 18,
+          "fontFamily": "Inter",
+          "fontWeight": "semibold",
+          "fill": "#EDEDEF"
+        },
+        {
+          "type": "text",
+          "id": "saturated_card_b2",
+          "x": 1280,
+          "y": 750,
+          "width": 520,
+          "height": 30,
+          "content": "• 대표 역: 강남, 홍대입구, 성수, 신촌, 여의도",
+          "fontSize": 18,
+          "fontFamily": "Inter",
+          "fontWeight": "semibold",
+          "fill": "#EDEDEF"
+        },
+        {
+          "type": "text",
+          "id": "saturated_card_desc",
+          "x": 1280,
+          "y": 800,
+          "width": 520,
+          "height": 160,
+          "content": "유동인구 총량(Cost)은 매우 높으나, 상권 밀집도(Benefit) 대비 과밀화로 인해 방문자들의 사용자 경험(UX)을 저해합니다. 지도 플랫폼 차원의 눈치게임 레이어를 활용해 트래픽을 분산할 필요성이 큽니다.",
+          "fontSize": 16,
+          "fontFamily": "Inter",
+          "fontWeight": "normal",
+          "fill": "#9B9BA3"
+        }
+      ]
+    }
+  ]
+}
