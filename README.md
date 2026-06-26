@@ -38,8 +38,7 @@ ABCD/
 ├── subway_location_data_2023_2026.csv         # Subway coordinate datasets
 ├── bus_location_data.csv                      # Bus node datasets
 ├── Seoul_subway_data_2023_2026.csv            # Subway transit datasets (subset)
-├── images/                                    # Assets pushed to GitHub
-│   └── cp_matrix_dark.png                     # Rendered English C/P Matrix plot
+├── images/                                    # [Excluded] Local folder for generated plot assets
 ├── backup_scratch/                            # [Excluded] Temporary scratch files
 └── presentation_materials/                    # [Excluded] Local PPTX, PDF, and scripts
 ```

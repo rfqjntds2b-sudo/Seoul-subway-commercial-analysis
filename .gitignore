@@ -14,6 +14,9 @@ presentation_materials/
 # Ignore Pencil.dev design files
 *.pen
 
+# Ignore generated images folder locally
+images/
+
 # Python/Jupyter Notebook temporary files
 .ipynb_checkpoints/
 __pycache__/
