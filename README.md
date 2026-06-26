@@ -1,64 +1,63 @@
-# 🚉 서울 대중교통 및 상가 융합 혼잡 가성비(C/P) 상권 분석
+# 🚉 Seoul Transit & Commercial Inflow Cost-Benefit (C/P) Analysis
 
-본 프로젝트는 서울시 지하철·버스 하차 유동인구(혼잡도, Cost)와 소상공인 상가 인프라(선택지, Benefit) 데이터를 공간 결합하여, 인파는 적으면서도 즐길 거리는 풍부한 **'혼잡 가성비(C/P) 대안 상권(숨은 꿀역)'**을 도출하고 이를 시각화한 분석 프로젝트입니다.
-
----
-
-## 📌 1. 프로젝트 배경 (Context)
-* **Situation**: 현재 지도 서비스는 맛집 정보와 최적 경로를 실시간으로 제공하나, 대다수 사용자가 대형 핫플(강남, 홍대 등)로 몰려 극심한 혼잡과 긴 대기 시간을 마주하는 페인 포인트가 존재합니다.
-* **Complication**: 단순 핫플레이스 추천은 과밀화를 심화시키며, 쾌적함과 인프라 수준을 함께 평가할 수 있는 직관적인 지표가 부재합니다.
-* **Question**: 대중교통 유입 인구와 상가 밀집 데이터를 결합해 **'인파는 적고 선택지는 풍부한'** 가성비 상권을 추천할 수 있는 방안은 무엇인가?
-* **Solution**: 공간 분석(Haversine 알고리즘)으로 지하철역 반경 500m 이내 유동인구와 상가 수를 공간 결합하고, **혼잡 가성비(C/P) 지수**를 연산하여 이를 대시보드로 시각화 및 제안합니다.
+This repository contains the data analysis, spatial algorithms, and presentation layout for evaluating commercial zone efficiency in Seoul. By merging subway/bus alighting population (crowd density as **Cost**) and local restaurant/pub density (choice options as **Benefit**), we compute a **Congestion Cost-Benefit (C/P) Index** to identify "hidden gems" (high benefit, low cost alternative zones).
 
 ---
 
-## 📊 2. 분석 방법론 (Methodology)
-1. **데이터 수집 및 전처리**:
-   - **지하철**: 서울시 지하철 시간대별 승하차 데이터 및 지하철역 위치 정보 (2026년 5월 최신 기준 취합)
-   - **버스**: 버스정류소 위치 및 연도별 승하차 데이터 병합
-   - **상가**: 소상공인시장진흥공단 서울 상가 데이터 중 대분류가 '음식'인 주점/식당 추출
-2. **공간 결합 알고리즘 (Spatial Matching)**:
-   - 각 지하철역 좌표를 기준으로 **반경 500m 이내** 정류장의 버스 하차 유동인구 합산 및 음식점/주점 상가 수 스캔 (Haversine 거리 기준)
-3. **C/P 지수 수식**:
-   $$\text{혼잡 가성비(C/P) 지수} = \frac{\text{반경 500m 내 음식점 수 (Benefit)}}{\text{지하철 및 버스 통합 하차 인구 (Cost)} + 1} \times 10,000$$
+## 📌 1. Project Background (Context)
+* **Situation**: Map platforms (Naver Maps, KakaoMap, etc.) provide abundant food information and pathfinding. People use these platforms to find locations for weekends and Friday nights.
+* **Complication**: Relying on simple hot-place recommendations leads users to overcrowded spots (e.g., Gangnam, Hongdae) with extreme queues, transit congestion, and a degraded user experience (UX). Currently, there is no unified index assessing crowd density vs. shop volume to find pleasant but rich commercial zones.
+* **Question**: How can we merge public transit flow and shop density data to suggest alternative, high-value, low-crowd commercial zones?
+* **Solution**: Build a **Congestion Cost-Benefit (C/P) Index** using spatial matching (Haversine 500m radius scans) of subway stations and surrounding food/drink venues.
 
 ---
 
-## 📁 3. 프로젝트 폴더 구조 (Directory Structure)
+## 📊 2. Methodology
+1. **Data Preprocessing**:
+   - **Subway**: Monthly transit logs and coordinate mappings (filtered for May 2026).
+   - **Bus**: Annual boarding logs and bus stop GPS nodes.
+   - **Shops**: Local business directory containing coordinates of restaurants, cafes, and pubs in Seoul.
+2. **Spatial Matching**:
+   - For each subway station, calculate the total bus alighting flow and food shop counts within a **500-meter radius** using the Haversine distance formula.
+3. **C/P Index Equation**:
+   $$\text{C/P Index} = \frac{\text{Number of Food/Drink Shops within 500m (Benefit)}}{\text{Combined Subway & Bus Alighting Inflow (Cost)} + 1} \times 10,000$$
+
+---
+
+## 📁 3. Directory Structure
 ```text
 ABCD/
-├── .gitignore                                 # 대용량 raw 데이터 파일 및 임시 파일 업로드 제외 설정
-├── README.md                                  # 프로젝트 설명서 (본 파일)
-├── 지하철_프로젝트.ipynb                       # 메인 데이터 분석 및 시각화 주피터 노트북
-├── project.ipynb                              # 데이터 전처리 및 지도 오버레이 보조 노트북
-├── pencil-new.pen                             # Pencil.dev 디자인 툴로 제작된 1920x1080 슬라이드 디자인 파일
-├── subway_bus_shop_merged_result_optimized.csv # 분석 결과가 최종 결합된 최적화 데이터셋
-├── subway_location_data_2023_2026.csv         # 지하철역 위경도 좌표 데이터
-├── bus_location_data.csv                      # 버스정류장 위경도 좌표 데이터
-├── Seoul_subway_data_2023_2026.csv            # 지하철 역별 승하차 원천 데이터 (일부)
-├── backup_scratch/                            # 작업용 임시 및 테스트 노트북 백업 폴더 (Git 제외)
-└── 발표자료/                                   # 프레젠테이션 이미지 및 자동화 플롯 폴더
-    ├── generate_dark_plot.py                  # 다크 테마 C/P 매트릭스 플롯 자동 생성 스크립트
-    ├── cp_matrix_dark.png                     # Pencil 디자인 가이드를 준수하여 생성된 매트릭스 다크 차트
-    ├── 눈치게임_레이어_발표자료.pptx             # 최종 발표용 PowerPoint 슬라이드
-    └── 눈치게임_레이어_발표자료.pdf              # 최종 발표용 PDF 문서
+├── .gitignore                                 # Files excluded from Git pushes
+├── README.md                                  # Project explanation (this file)
+├── 지하철_프로젝트.ipynb                       # Main analysis and mapping Jupyter Notebook
+├── project.ipynb                              # Preprocessing and map overlay Notebook
+├── pencil-new.pen                             # Slide design file for Pencil.dev (1920x1080)
+├── generate_dark_plot_en.py                   # Script to generate the English dark-theme plot
+├── subway_bus_shop_merged_result_optimized.csv # Processed final dataset
+├── subway_location_data_2023_2026.csv         # Subway coordinate datasets
+├── bus_location_data.csv                      # Bus node datasets
+├── Seoul_subway_data_2023_2026.csv            # Subway transit datasets (subset)
+├── images/                                    # Assets pushed to GitHub
+│   └── cp_matrix_dark.png                     # Rendered English C/P Matrix plot
+├── backup_scratch/                            # [Excluded] Temporary scratch files
+└── 발표자료/                                   # [Excluded] Local PPTX, PDF, and Korean scripts
 ```
 
 ---
 
-## 📈 4. 주요 분석 결과 (Key Findings)
+## 📈 4. Key Findings
 
-### 2사분면: Target Zone (대안 상권 / 숨은 꿀역)
-* **특징**: 유동인구량(Cost)은 적고, 반경 500m 내 상가 수(Benefit)는 풍부함.
-* **대표 지역**: **상수역(C/P: 18.14)**, **송파나루역(C/P: 13.15)**, **석촌고분역(C/P: 10.60)**, 망원역, 이태원역 등.
-* **시각화 결과**: `발표자료/cp_matrix_dark.png`에 다크 테마 디자인 가이드를 적용하여 분포를 도식화했습니다.
+### Alternative Zone (Hidden Gems) - 2nd Quadrant
+* **Characteristics**: Low transit crowd flow (Cost) and rich shop counts (Benefit).
+* **Representative Areas**: **Sangsu Station (C/P: 18.14)**, **Songpanaru Station (C/P: 13.15)**, **Seokchongobun Station (C/P: 10.60)**, Mangwon Station, Itaewon Station.
+* **Visualization**: Plot representation is saved under `images/cp_matrix_dark.png`.
 
-### 1사분면: 과포화 상권 (기존 핫플)
-* **특징**: 유동인구량(Cost)이 극도로 높고 상가 수(Benefit)도 많으나, 대형 밀집 구역으로 대기 시간 및 혼잡 악화.
-* **대표 지역**: 강남역, 홍대입구역, 성수역, 신촌역, 여의도역 등.
+### Saturated Zone (Traditional Hot Spots) - 1st/4th Quadrant
+* **Characteristics**: Extremely high crowd flow (Cost), making the experience crowded despite rich options.
+* **Representative Areas**: Gangnam Station, Hongdae Station, Seongsu Station, Sinchon Station, Yeouido Station.
 
 ---
 
-## 🔒 5. 개인정보 및 보안 검증 결과 (Security Check)
-* 로컬 저장소 전체 파일을 대상으로 정규표현식 및 스캔 스크립트를 사용하여 **개인 식별 정보(이메일, 계정 정보 등) 및 API Private Key(예: Vworld API Key 등)의 유출 여부를 정밀 검사**했습니다.
-* 분석에 사용된 Vworld API Key는 `"YOUR_VWORLD_API_KEY"` 형태로 **템플릿화(가리기 처리)**하여 외부 유출이 없음을 확인 및 검증 완료하였습니다.
+## 🔒 5. Privacy & Data Security Check
+* Audited all tracked files (`.ipynb`, `.py`, `.json`, `.pen`) for credentials, personal emails, or private API keys.
+* Confirmed that Vworld developer keys are masked as `"YOUR_VWORLD_API_KEY"` to prevent credential leakage.

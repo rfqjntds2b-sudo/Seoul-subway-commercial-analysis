@@ -8,6 +8,9 @@ shop.csv
 # Temporary scratch notebooks
 backup_scratch/
 
+# Ignore presentation materials locally
+발표자료/
+
 # Python/Jupyter Notebook temporary files
 .ipynb_checkpoints/
 __pycache__/
