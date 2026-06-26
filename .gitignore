@@ -1,0 +1,17 @@
+# Ignore large raw datasets (exceeding GitHub's 100MB limit)
+filtered_bus_data_2023.csv
+filtered_bus_data_2024.csv
+filtered_bus_data_2025.csv
+filtered_bus_data_2026.csv
+shop.csv
+
+# Python/Jupyter Notebook temporary files
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.venv
+env/
+venv/
