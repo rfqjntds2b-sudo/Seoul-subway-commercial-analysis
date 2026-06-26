@@ -29,15 +29,17 @@ This repository contains the data analysis, spatial algorithms, and presentation
 ABCD/
 ├── .gitignore                                 # Files excluded from Git pushes
 ├── README.md                                  # Project explanation (this file)
-├── seoul_subway_analysis.ipynb                 # Main analysis and mapping Jupyter Notebook
-├── project.ipynb                              # Preprocessing and map overlay Notebook
 ├── project_context.txt                        # Project background context
 ├── pencil-new.pen                             # [Excluded] Slide design file for Pencil.dev (1920x1080)
-├── generate_dark_plot_en.py                   # Script to generate the English dark-theme plot
-├── subway_bus_shop_merged_result_optimized.csv # Processed final dataset
-├── subway_location_data_2023_2026.csv         # Subway coordinate datasets
-├── bus_location_data.csv                      # Bus node datasets
-├── Seoul_subway_data_2023_2026.csv            # Subway transit datasets (subset)
+├── data/
+│   ├── raw/                                   # [Excluded] Raw datasets (shop.csv, filtered_bus_data_*.csv, etc.)
+│   └── processed/
+│       └── subway_bus_shop_merged_result_optimized.csv # Processed final dataset
+├── notebooks/
+│   ├── seoul_subway_analysis.ipynb            # Main analysis and mapping Jupyter Notebook
+│   └── project.ipynb                          # Preprocessing and map overlay Notebook
+├── src/
+│   └── generate_dark_plot_en.py               # Script to generate the English dark-theme plot
 ├── images/                                    # [Excluded] Local folder for generated plot assets
 ├── backup_scratch/                            # [Excluded] Temporary scratch files
 └── presentation_materials/                    # [Excluded] Local PPTX, PDF, and scripts
