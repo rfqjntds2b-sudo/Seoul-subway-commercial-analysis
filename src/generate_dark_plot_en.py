@@ -8,7 +8,7 @@ plt.rc('font', family='DejaVu Sans')
 plt.rcParams['axes.unicode_minus'] = False
 
 # Load data
-df = pd.read_csv('subway_bus_shop_merged_result_optimized.csv', encoding='utf-8-sig')
+df = pd.read_csv('data/processed/subway_bus_shop_merged_result_optimized.csv', encoding='utf-8-sig')
 
 # Define target stations and their English translations
 station_translation = {

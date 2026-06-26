@@ -1,9 +1,5 @@
-# Ignore large raw datasets (exceeding GitHub's 100MB limit)
-filtered_bus_data_2023.csv
-filtered_bus_data_2024.csv
-filtered_bus_data_2025.csv
-filtered_bus_data_2026.csv
-shop.csv
+# Ignore raw datasets folder (contains large raw files exceeding 100MB)
+data/raw/
 
 # Temporary scratch notebooks
 backup_scratch/
