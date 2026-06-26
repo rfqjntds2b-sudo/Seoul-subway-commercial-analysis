@@ -1,10 +1,10 @@
-# 🚉 Seoul Transit & Commercial Inflow Cost-Benefit (C/P) Analysis
+# Seoul Transit & Commercial Inflow Cost-Benefit (C/P) Analysis
 
 This repository contains the data analysis, spatial algorithms, and presentation layout for evaluating commercial zone efficiency in Seoul. By merging subway/bus alighting population (crowd density as **Cost**) and local restaurant/pub density (choice options as **Benefit**), we compute a **Congestion Cost-Benefit (C/P) Index** to identify "hidden gems" (high benefit, low cost alternative zones).
 
 ---
 
-## 📌 1. Project Background (Context)
+## 1. Project Background (Context)
 * **Situation**: Map platforms (Naver Maps, KakaoMap, etc.) provide abundant food information and pathfinding. People use these platforms to find locations for weekends and Friday nights.
 * **Complication**: Relying on simple hot-place recommendations leads users to overcrowded spots (e.g., Gangnam, Hongdae) with extreme queues, transit congestion, and a degraded user experience (UX). Currently, there is no unified index assessing crowd density vs. shop volume to find pleasant but rich commercial zones.
 * **Question**: How can we merge public transit flow and shop density data to suggest alternative, high-value, low-crowd commercial zones?
@@ -12,7 +12,7 @@ This repository contains the data analysis, spatial algorithms, and presentation
 
 ---
 
-## 📊 2. Methodology
+## 2. Methodology
 1. **Data Preprocessing**:
    - **Subway**: Monthly transit logs and coordinate mappings (filtered for May 2026).
    - **Bus**: Annual boarding logs and bus stop GPS nodes.
@@ -24,7 +24,7 @@ This repository contains the data analysis, spatial algorithms, and presentation
 
 ---
 
-## 📁 3. Directory Structure
+## 3. Directory Structure
 ```text
 ABCD/
 ├── .gitignore                                 # Files excluded from Git pushes
@@ -45,7 +45,7 @@ ABCD/
 
 ---
 
-## 📈 4. Key Findings
+## 4. Key Findings
 
 ### Alternative Zone (Hidden Gems) - 2nd Quadrant
 * **Characteristics**: Low transit crowd flow (Cost) and rich shop counts (Benefit).
@@ -58,6 +58,6 @@ ABCD/
 
 ---
 
-## 🔒 5. Privacy & Data Security Check
+## 5. Privacy & Data Security Check
 * Audited all tracked files (`.ipynb`, `.py`, `.json`, `.pen`) for credentials, personal emails, or private API keys.
 * Confirmed that Vworld developer keys are masked as `"YOUR_VWORLD_API_KEY"` to prevent credential leakage.
