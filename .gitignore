@@ -11,6 +11,9 @@ backup_scratch/
 # Ignore presentation materials locally
 presentation_materials/
 
+# Ignore Pencil.dev design files
+*.pen
+
 # Python/Jupyter Notebook temporary files
 .ipynb_checkpoints/
 __pycache__/
