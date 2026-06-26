@@ -32,7 +32,7 @@ ABCD/
 ├── seoul_subway_analysis.ipynb                 # Main analysis and mapping Jupyter Notebook
 ├── project.ipynb                              # Preprocessing and map overlay Notebook
 ├── project_context.txt                        # Project background context
-├── pencil-new.pen                             # Slide design file for Pencil.dev (1920x1080)
+├── pencil-new.pen                             # [Excluded] Slide design file for Pencil.dev (1920x1080)
 ├── generate_dark_plot_en.py                   # Script to generate the English dark-theme plot
 ├── subway_bus_shop_merged_result_optimized.csv # Processed final dataset
 ├── subway_location_data_2023_2026.csv         # Subway coordinate datasets
