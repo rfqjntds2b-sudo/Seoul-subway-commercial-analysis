@@ -9,7 +9,7 @@ shop.csv
 backup_scratch/
 
 # Ignore presentation materials locally
-발표자료/
+presentation_materials/
 
 # Python/Jupyter Notebook temporary files
 .ipynb_checkpoints/

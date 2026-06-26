@@ -29,8 +29,9 @@ This repository contains the data analysis, spatial algorithms, and presentation
 ABCD/
 ├── .gitignore                                 # Files excluded from Git pushes
 ├── README.md                                  # Project explanation (this file)
-├── 지하철_프로젝트.ipynb                       # Main analysis and mapping Jupyter Notebook
+├── seoul_subway_analysis.ipynb                 # Main analysis and mapping Jupyter Notebook
 ├── project.ipynb                              # Preprocessing and map overlay Notebook
+├── project_context.txt                        # Project background context
 ├── pencil-new.pen                             # Slide design file for Pencil.dev (1920x1080)
 ├── generate_dark_plot_en.py                   # Script to generate the English dark-theme plot
 ├── subway_bus_shop_merged_result_optimized.csv # Processed final dataset
@@ -40,7 +41,7 @@ ABCD/
 ├── images/                                    # Assets pushed to GitHub
 │   └── cp_matrix_dark.png                     # Rendered English C/P Matrix plot
 ├── backup_scratch/                            # [Excluded] Temporary scratch files
-└── 발표자료/                                   # [Excluded] Local PPTX, PDF, and Korean scripts
+└── presentation_materials/                    # [Excluded] Local PPTX, PDF, and scripts
 ```
 
 ---
