@@ -20,7 +20,7 @@ This repository contains the data analysis, spatial algorithms, and presentation
 2. **Spatial Matching**:
    - For each subway station, calculate the total bus alighting flow and food shop counts within a **500-meter radius** using the Haversine distance formula.
 3. **C/P Index Equation**:
-   $$\text{C/P Index} = \frac{\text{Number of Food/Drink Shops within 500m (Benefit)}}{\text{Combined Subway & Bus Alighting Inflow (Cost)} + 1} \times 10,000$$
+   $$\text{C/P Index} = \frac{\text{Number of Food/Drink Shops within 500m (Benefit)}}{\text{Combined Subway and Bus Alighting Inflow (Cost)} + 1} \times 10,000$$
 
 ---
 
